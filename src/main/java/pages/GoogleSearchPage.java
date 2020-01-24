@@ -29,6 +29,7 @@ public class GoogleSearchPage {
     }
 
     public void openGoogleSearchPage() {
+        driver.manage().window().maximize();
         driver.get(GOOGLE_SEARCH_PAGE_URL);
     }
 
@@ -37,8 +38,8 @@ public class GoogleSearchPage {
         this.googleSearchButton.click();
     }
 
-    public void setTextToGoogleSearchInput(String value) {
-        searchInput.sendKeys(value);
+    public void inputTextInSearchField(String text) {
+        searchInput.sendKeys(text);
         logoImg.click();
     }
 
@@ -47,6 +48,6 @@ public class GoogleSearchPage {
                 ExpectedConditions.and(
                         ExpectedConditions.visibilityOf(searchInput),
                         ExpectedConditions.visibilityOf(logoImg))
-                );
+        );
     }
 }

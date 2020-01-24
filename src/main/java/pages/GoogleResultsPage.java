@@ -22,15 +22,21 @@ public class GoogleResultsPage {
 
     public GoogleResultsPage(WebDriver driver) {
         this.driver = driver;
+        wait = new WebDriverWait(driver, 120);
         PageFactory.initElements(this.driver, this);
-        wait = new WebDriverWait(driver, 20);
+
     }
 
     public void waitResultPageLoad() {
         wait.until(ExpectedConditions.visibilityOf(resultStatus));
     }
 
-    public List<WebElement> getLinksOnPage(){
+    public List<WebElement> getLinksOnPage() {
         return links;
+    }
+
+    public boolean isPageDisplayed() {
+        waitResultPageLoad();
+        return resultStatus.isDisplayed();
     }
 }

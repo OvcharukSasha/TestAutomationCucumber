@@ -1,27 +1,17 @@
 package clients.restClients;
 
-import DTOs.DTORandomUser;
-import com.google.gson.Gson;
 import io.restassured.response.Response;
-
-import java.util.List;
-
-import static helpers.RandomUserAPIHelper.sendGetMultipleUsersWithParams;
-import static helpers.RandomUserAPIHelper.sendGetUser;
+import static io.restassured.RestAssured.given;
 
 public class RandomUserClient {
+    private static final String GET_USER_REQUEST = "https://randomuser.me/api/";
+    private static final String NUMBER_PARAMETER = "results";
 
-    public List<DTORandomUser.Result> getMultipleUsers(int usersAmount) {
-        Response response = sendGetMultipleUsersWithParams(usersAmount);
-        return getDTORandomUserFromResponse(response).getResults();
+    public static Response sendGetMultipleUsersRequest(int usersAmount) {
+        return given().queryParam(NUMBER_PARAMETER, usersAmount).get(GET_USER_REQUEST);
     }
 
-    public DTORandomUser getDTORandomUserFromResponse(Response response){
-        return new Gson().fromJson(response.asString(), DTORandomUser.class);
-    }
-
-    public DTORandomUser.Result getUser() {
-        Response response = sendGetUser();
-        return getDTORandomUserFromResponse(response).getResults().get(0);
+    public static Response sendGetUser() {
+        return given().get(GET_USER_REQUEST);
     }
 }
