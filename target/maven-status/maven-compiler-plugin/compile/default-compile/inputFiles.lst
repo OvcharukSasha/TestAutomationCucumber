@@ -1,0 +1,8 @@
+/Users/oleksandraovcaruk/Desktop/myProjects/TestAutomationCucumber/src/main/java/enums/Context.java
+/Users/oleksandraovcaruk/Desktop/myProjects/TestAutomationCucumber/src/main/java/pages/GoogleSearchPage.java
+/Users/oleksandraovcaruk/Desktop/myProjects/TestAutomationCucumber/src/main/java/helpers/ScenarioContext.java
+/Users/oleksandraovcaruk/Desktop/myProjects/TestAutomationCucumber/src/main/java/clients/restClients/RandomUserClient.java
+/Users/oleksandraovcaruk/Desktop/myProjects/TestAutomationCucumber/src/main/java/pages/GoogleResultsPage.java
+/Users/oleksandraovcaruk/Desktop/myProjects/TestAutomationCucumber/src/main/java/helpers/FileWriterReader.java
+/Users/oleksandraovcaruk/Desktop/myProjects/TestAutomationCucumber/src/main/java/helpers/RandomUserHelper.java
+/Users/oleksandraovcaruk/Desktop/myProjects/TestAutomationCucumber/src/main/java/DTOs/DTORandomUser.java

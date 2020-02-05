@@ -1,0 +1,5 @@
+stepDefinitions/RandomUsersUI_sd.class
+stepDefinitions/RandomUsersAPI_sd.class
+stepsRealization/ui/UICommonSteps.class
+stepsRealization/api/RandomUserAPISteps.class
+hooks/TestRunner.class
