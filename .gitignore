@@ -1,0 +1,6 @@
+.idea
+ target
+ *.iml
+ debug.log
+ .idea/workspace.xml
+ .DS_Store
